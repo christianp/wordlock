@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Word Lock</title>
+		<link rel="stylesheet" href="wordlock.css"></link>
+	</head>
+	<body>
+		<div class="header">
+			<a href="http://www.puzzlebomb.co.uk"><img src="puzzlebomb_logo.png" class="logo"/></a>
+		</div>
+
+		<div class="puzzle cf">
+			<div class="description">
+				<h1>Word Lock</h1>
+				<h2>by <a href="https://twitter.com/derek_couzens">@derek_couzens</a>.</h2>
+				<p>The ten lights at the top each have a letter, and pressing each button toggles the lights with the letters in that word (off or on, depending on their current state). Which buttons must you press to light the whole panel? All the lights are off to start with.</p>
+			</div>
+			<div class="game">
+				<ul class="switches" data-bind="foreach: letters">
+					<li class="switch" data-bind="css: {on: on}, text: letter"></li>
+				</ul>
+				<ul class="words" data-bind="foreach: words">
+					<li class="word" data-bind="css: {on: on}, click: toggle, text: word"></li>
+				</ul>
+			</div>
+		</div>
+
+		<script src="knockout-3.2.0.js"></script>
+		<script src="wordlock.js"></script>
+	</body>
+</html>
